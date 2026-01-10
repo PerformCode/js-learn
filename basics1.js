@@ -6,7 +6,7 @@ console.log("Hello World")
     console.log(a)
     console.log(b)
 
-//following prints the type of varibale
+//following prints the type of variable
     console.log(typeof(a))
 
 let required = true
