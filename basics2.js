@@ -1,6 +1,6 @@
 var marks = Array(6)
 var marks = new Array(1,2,3,4,5,6)
-var marks = [10,20,30,40,50,60] //most effective
+var marks = [10,20,30,40,50,60] //most effective way
 
 console.log(marks[3])
 
