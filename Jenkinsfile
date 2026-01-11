@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/PerformCode/js-learn'
+                git url: 'https://github.com/PerformCode/js-learn.git',
+                branch: 'main',
+                credentialsId: 'github-app-creds'
             }
         }
         stage('Install Dependencies') {
