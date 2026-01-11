@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh echo 'Building the app'
+                sh 'echo "Building the app"'
             }
         }
         stage('Test') {
             steps {
-                sh echo 'Running tests'
+                sh 'echo "Running tests"'
             }
         }
         stage('Deploy') {
             steps {
-                sh echo 'Deploying the app'
+                sh 'echo "Deploying the app"'
             }
         }
     }
