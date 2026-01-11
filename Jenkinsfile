@@ -7,14 +7,14 @@ pipeline {
                 git 'https://github.com/PerformCode/js-learn'
             }
         }
-        stage('Build') {
+        stage('Install Dependencies') {
             steps {
-                sh 'echo "Building the app"'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Running tests"'
+                sh 'npm test'
             }
         }
         stage('Deploy') {
