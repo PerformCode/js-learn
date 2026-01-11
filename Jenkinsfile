@@ -2,20 +2,33 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/PerformCode/js-learn'
+            }
+        }
         stage('Build') {
             steps {
-                echo 'Building the app'
+                bat echo 'Building the app'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing the app'
+                bat echo 'Running tests'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying the app'
+                bat echo 'Deploying the app'
             }
+        }
+    }
+    post{
+        success{
+            bat echo "build successful"
+        }
+        failure{
+            bat echo "build failed"
         }
     }
 }
